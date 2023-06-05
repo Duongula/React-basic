@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.scss';
+import MyComponent from './Example/MyComponent';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +10,8 @@ function App() {
         <p>
           Hello world with Reactjs
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <MyComponent/>
       </header>
     </div>
   );
