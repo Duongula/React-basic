@@ -19,6 +19,22 @@ class MyComponent extends React.Component {
         })
     }
 
+    deleteAJob = (job) => {
+        let currenJob = this.state.arrJobs
+        currenJob = currenJob.filter(item => item.id !== job.id)
+
+        this.setState({
+            arrJobs: currenJob
+        })
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        console.log('>>> run didupdate: ', 'prev state: ', prevState, 'current state: ', this.state)
+    }
+    componentDidMount(){
+        console.log('>>> run component did mount')
+    }
+
     render() {
         console.log('>>> call render: ', this.state)
         return (
@@ -30,6 +46,7 @@ class MyComponent extends React.Component {
 
                 <ChildComponent 
                     arrJobs={this.state.arrJobs}
+                    deleteAJob={this.deleteAJob}
                 />
 
             </>
