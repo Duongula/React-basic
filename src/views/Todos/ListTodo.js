@@ -44,6 +44,8 @@ class ListTodo extends React.Component {
                 listTodos: listTodosCopy,
                 editTodo: {}
             })
+
+            toast.success("Update successed!")
             return;
         }
         this.setState({
